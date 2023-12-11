@@ -3,5 +3,6 @@ print "Hello, world!!!"
 # Printing "21+121-42 = 100"
 set $n1 = 21
 set $n2 = 121
-set $sum = $n1 + $n2 - 42
-print "$sum = ", $n1, "+", $n2, "-42 = ", $sum
+set $n3 = 121
+set $sum = $n1 + $n2 - $n3 - 42
+print "$sum = ", $n1, "+", $n2, "-", $n3, "-42 = ", $sum

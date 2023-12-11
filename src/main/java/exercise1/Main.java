@@ -1,12 +1,15 @@
-package org.example;
-
+package exercise1;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
+        FrequencyDictionary frequencyDictionary= new FrequencyDictionary();
+
         File file = new File("C:\\Users\\Professional\\IdeaProjects\\Lab2_J120\\j120-lab2.txt");
         if(file.exists() && file.canRead()){
             StringBuilder sb = new StringBuilder();
@@ -20,16 +23,16 @@ public class Main {
             } catch (IOException e) {
                e.printStackTrace();
             }
-            System.out.println(sb.toString());
+            frequencyDictionary.setText(sb.toString());
         }
 
-        System.out.printf("Hello and welcome!");
+        frequencyDictionary.text();
+        frequencyDictionary.reportByAlph();
+        frequencyDictionary.reportByAlphRev();
+        frequencyDictionary.reportByFreq();
+
+        System.out.println(Arrays.toString(frequencyDictionary.dictionary()));
 
 
-        for (int i = 1; i <= 5; i++) {
-
-
-            System.out.println("i = " + i);
-        }
     }
 }
